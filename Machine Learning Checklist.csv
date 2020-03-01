@@ -1,0 +1,185 @@
+﻿TYPE,CONTENT,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE
+section,🖼 Frame the problem:,,,,,,,
+task,Define the objectives in business terms,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,How will solution be used?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,What are the current solutions/workarounds?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"How should you frame the problem (supervised/unsupervised, online/offline, etc.)?",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,How should performance be measured?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Is the performance measure aligned with the business objective?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,What would be the minimum performance needed to reach the business objective?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,What are comparable problems? Can you reuse experience or tools?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Is human expertise available?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,How would you solve the problem manually?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,List assumptions you have made so far?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Verify assumptions,4,1,,,,en,America/Montreal
+,,,,,,,,
+section,📚 Get the data (automate as much as possible to get fresh data):,,,,,,,
+task,List the data you need and how much you need,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Find and document where you can get that data,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Check how much space it will take,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Check legal obligations, and get authorization if necessary",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Get access authorization,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Creeate a workspace with enough storage space,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Get the data,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Convert the data to a format you can easily manipulate (without changing the data itself),4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Ensure the sensitive information is deleted or protected (anonymized),4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Check the size and type of data (time seris, sample, geographical, etc)",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Sample a test set, put it aside, and never look at it",4,1,,,,en,America/Montreal
+,,,,,,,,
+section,🧭 Explore the data to get insights: (Get insights from a field expert),,,,,,,
+task,Create a copy of the data for exploration (sample it down to a manageable size),4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Create a Jupyter notebook to keep a record of your data exploration,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Study each attribute and its characteristics,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Name,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Type,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,% of missing values,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Noisiness and type of nose (stochastic, outlier, rounding error, etc.(",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Usefulness for the task,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Type of distribution (Gaussian, Uniform, Logarithmic, ...)",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"For supervised leaning tasks, identify the target attribute(s)",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Visualize the data,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Study the correlations between attributes,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Study how you would solve the problem manually,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Identify the promising transformations you may want to apply,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Identify extra data that would be usefull (Go back to get the data),4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Document what you have learned,4,1,,,,en,America/Montreal
+,,,,,,,,
+section,🚿 Prepare the data for ML algos:,,,,,,,
+task,Work on copies of the data (keep the original dataset inteact),4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Write functions for all data transformations you apply, for five reasons:",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,So you can easily prepare the data the next time you get a fresh dataset,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,So you can apply these transformations in future projects,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,To clean and prepare the test set,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,To clean and prepare new data instances once your solution is live,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,To make it easy to treat your preparation choices as hyperparameters,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Data cleaning:,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Fix or remove outliers,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Fill in missing values or drop the rows,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Feature Selection:,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Drop the attributes that provide no usefull information for the task,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Feature engineering, when appropriate:",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Discretize continuous features,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Decompose features (categorical, date/time)",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Add promising transformations of features (log(x), sqrt(x), x**2, etc..)",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Aggregate features into promising new features,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Feature scaling:,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Standardize or normalize features,4,2,,,,en,America/Montreal
+,,,,,,,,
+section,🌳 Shortlist promising models:,,,,,,,
+task,"Train many quick-and-dirty models from different categories (e.g., linear, naive Bayes, SVM, Random Forest, neural net, etc.) using standard parameters.",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Measure and compare their performance.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"For each model, use N-fold cross-validation and compute the mean and standard deviation of the performance measure on the N folds.",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Analyze the most significant variables for each algorithm.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Analyze the types of errors the models make.    What data would a human have used to avoid these errors?,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,What data would a human have used to avoid these errors?,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Perform a quick round of feature selection and engineering.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Perform one or two more quick iterations of the five previous steps.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Shortlist the top three to five most promising models, preferring models that make different types of errors.",4,1,,,,en,America/Montreal
+,,,,,,,,
+section,🔧 Fine tune system:,,,,,,,
+task,"You will want to use as much data as possible for this step, especially as you move toward the end of fine-tuning.",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"As always, automate what you can.",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Fine-tune hyperparameters using corss validation:,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Treat your data transformation choices as hyperparameters, especially when you are not sure about them (e.g., if you’re not sure whether to replace missing values with zeros or with the median value, or to just drop the rows).",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Unless there are very few hyperparameter values to explore, prefer random search over grid search. If training is very long, you may prefer a Bayesian optimization approach",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Try Ensemble methods. Combining your best models will often produce better performance than running them individually.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Once you are confident about your final model, measure its performance on the test set to estimate the generalization error.",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Warning!!! Don’t tweak your model after measuring the generalization error: you would just start overfitting the test set.,4,1,,,,en,America/Montreal
+,,,,,,,,
+section,🎁 Present your solution:,,,,,,,
+task,Document what you have done,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Create a nice presentation. Highlight big picture first.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Explain why your solution achieves the business bojective,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Don't forget to present interesting points you noticed along the way,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Describe what worked and what did not,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,List your assumptions and your system's limitations,4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Ensure your key findings are communicated through beautiful visualizations or easy-to-remember statements (""The median income is the number-one predictor of housing prices"")",4,1,,,,en,America/Montreal
+,,,,,,,,
+section,"🚢 Launch, monitor, and maintain system:",,,,,,,
+task,"Get your solution ready for productions (plug into production data, inputs, write unit tests, etc.)",4,1,,,,en,America/Montreal
+,,,,,,,,
+task,Write monitoring code to check your system's live performance at regular intervals and trigger alerts when it drops.,4,1,,,,en,America/Montreal
+,,,,,,,,
+task,"Beware of slow degradation: models tend to ""rot"" as data evolves.",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Measuring performance may require a human pipeline (via a crowdsourcing service),4,2,,,,en,America/Montreal
+,,,,,,,,
+task,"Also monitor you inputs' quality (a malfunctioning sensor sending a random values, or another teams's output becoming stale). This is particularly importan for online learning systems",4,2,,,,en,America/Montreal
+,,,,,,,,
+task,Retrain you models on regular basis on fresh data (automate as much as possible),4,1,,,,en,America/Montreal
+,,,,,,,,
